@@ -16,7 +16,12 @@ h1 {
     margin: auto;;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 500px;
+    max-width: 500px;
+    min-width: 500px;
+    height: 500px;
+    max-height: 500px;
+    min-height: 500px;
     border-top: 1px black solid;
     border-right: 1px black solid;
 }
@@ -24,12 +29,68 @@ h1 {
 .row {
     display: flex;
     align-items: flex-start;
+    margin: 0;
 }
 
 .cell {
+    box-sizing: border-box;
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0;
     border-left: 1px black solid;
     border-bottom: 1px black solid;
+}
+
+.slider {
+    appearance: none;
+    width: 20%;
+    height: 15px;
+    border-radius: 10px;
+    background: #dfd3df; 
+    outline: none; 
+    opacity: 0.7;
+    transition: opacity .2s;
+  }
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 25px; 
+    height: 25px; 
+    border-radius: 50%; 
+    background: #8e5ae0;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #8e5ae0;
+    cursor: pointer;
+}
+
+.slider-text {
+    text-align: center;
+    color: #3a1872;
+    width: 20%;
+    padding-top: 10px;
+}
+
+.button-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+button {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 20px;
+    padding: 10px;
+    width: 50%;
 }
