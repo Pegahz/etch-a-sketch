@@ -18,11 +18,19 @@ function createGrid(size = 16) {
 }
 
 // this function paints the cells black if the mouse hovers over them
-function paintCells() {
+function paintCells(inputColor = 0) {
     const cells = document.querySelectorAll('.cell');
     cells.forEach(cell => {
         cell.addEventListener('mouseover', () => {
-            cell.style.backgroundColor = generateRandomColor();
+            if (inputColor === 0) {
+                cell.style.backgroundColor = 'black';
+            }
+            if (inputColor === 1) {
+                cell.style.backgroundColor = 'white';
+            }
+            if (inputColor === 2) {
+                cell.style.backgroundColor = generateRandomColor();
+            }
         });
     });
 }
@@ -44,6 +52,13 @@ function deleteGrid() {
     }
 }
 
+function clearGrid() {
+    const cells = document.querySelectorAll('.cell');
+    cells.forEach((cell) => {
+        cell.style.backgroundColor = 'white';
+    });
+}
+
 function generateRandomColor() {
     let random = function () {
         return Math.ceil(Math.random() * 256);
@@ -52,5 +67,16 @@ function generateRandomColor() {
 }
 
 createGrid();
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if (button.id === 'black') paintCells();
+        if (button.id === 'color') paintCells(2);
+        if (button.id === 'grayscale') paintCells();
+        if (button.id === 'eraser') paintCells(1);
+        if (button.id === 'clear') clearGrid();
+    });
+});
+
 changeGrid();
 paintCells();

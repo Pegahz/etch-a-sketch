@@ -5,17 +5,33 @@ body {
 
 h1 {
     margin: auto;
-    text-align: center;   
+    text-align: center; 
+    font-size: 50px;
+    font-weight: bolder;
+    color: #3a1872;  
+    padding: 30px;
+}
+
+.content {
+    display: flex;
 }
 
 .main {
     display: flex;
+    flex: 4;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+}
+
+.menu {
+    margin-left: 30px;
+    margin-top: 100px;
+    flex: 1;
 }
 
 .container {
     margin: auto;;
-    justify-content: center;
-    align-items: center;
     width: 500px;
     max-width: 500px;
     min-width: 500px;
@@ -24,6 +40,7 @@ h1 {
     min-height: 500px;
     border-top: 1px black solid;
     border-right: 1px black solid;
+    background-color: white;
 }
 
 .row {
@@ -41,15 +58,21 @@ h1 {
     border-bottom: 1px black solid;
 }
 
+.slider-container {
+    display: flex;
+    justify-content: center;
+}
+
 .slider {
     appearance: none;
-    width: 20%;
+    width: 80%;
     height: 15px;
     border-radius: 10px;
     background: #dfd3df; 
     outline: none; 
     opacity: 0.7;
     transition: opacity .2s;
+    align-self: center;
   }
 
 .slider:hover {
@@ -76,7 +99,6 @@ h1 {
 .slider-text {
     text-align: center;
     color: #3a1872;
-    width: 20%;
     padding-top: 10px;
 }
 
@@ -84,7 +106,6 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20%;
 }
 
 button {
@@ -93,4 +114,25 @@ button {
     margin-top: 20px;
     padding: 10px;
     width: 50%;
+    border: #3a1872 2px solid;
+    border-radius: 5px;
+    -webkit-background-clip: text;
+    background-clip: text;
+    opacity: 0.8;
+    transition: opacity .1s;
+}
+
+button:hover {
+    opacity: 1;
+}
+
+#color {
+    background-image: linear-gradient(to left, violet, indigo, blue, green, yellow, orange, red);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+#grayscale {
+    color: gray;
 }
