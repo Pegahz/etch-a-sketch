@@ -8,7 +8,8 @@ h1 {
     text-align: center; 
     font-size: 50px;
     font-weight: bolder;
-    color: #3a1872;  
+    color: white;  
+    background-color: #210a46;
     padding: 30px;
 }
 
@@ -38,8 +39,8 @@ h1 {
     height: 500px;
     max-height: 500px;
     min-height: 500px;
-    border-top: 1px black solid;
-    border-right: 1px black solid;
+    border: 3px #210a46 solid;
+    border-radius: 5px;
     background-color: white;
 }
 
@@ -54,8 +55,6 @@ h1 {
     justify-content: flex-start;
     align-items: flex-start;
     margin: 0;
-    border-left: 1px black solid;
-    border-bottom: 1px black solid;
 }
 
 .slider-container {
@@ -98,7 +97,7 @@ h1 {
 
 .slider-text {
     text-align: center;
-    color: #3a1872;
+    color: #210a46;
     padding-top: 10px;
 }
 
@@ -114,7 +113,7 @@ button {
     margin-top: 20px;
     padding: 10px;
     width: 50%;
-    border: #3a1872 2px solid;
+    border: #210a46 2px solid;
     border-radius: 5px;
     -webkit-background-clip: text;
     background-clip: text;
@@ -133,6 +132,9 @@ button:hover {
     background-clip: text;
 }
 
-#grayscale {
-    color: gray;
+.footer {
+    color: white;  
+    background-color: #210a46;
+    text-align: center; 
+    padding: 30px;
 }

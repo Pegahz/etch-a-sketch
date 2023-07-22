@@ -70,9 +70,8 @@ createGrid();
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
-        if (button.id === 'black') paintCells();
+        if (button.id === 'black') paintCells(0);
         if (button.id === 'color') paintCells(2);
-        if (button.id === 'grayscale') paintCells();
         if (button.id === 'eraser') paintCells(1);
         if (button.id === 'clear') clearGrid();
     });
